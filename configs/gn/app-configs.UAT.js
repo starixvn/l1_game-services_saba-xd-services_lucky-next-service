@@ -2,8 +2,8 @@ export default {
     hostingPort: 5000,
     apiSettings: {
         enabledApi: true,
-        apiUrl: "http://gn_game_api_uat:5000",
-        authUrl: "http://gn_auth_api_uat:5000",
+        apiUrl: "http://gn-game-api-uat-service:5000",
+        authUrl: "http://gn-auth-api-uat-service:5000",
         client: {
             id: "game-server",
             secret: "gameserver@20luminet&",
@@ -22,7 +22,7 @@ export default {
     },
     enabledLogs: true,
     database: {
-        url: "mongodb://lmn_backend:LmnBackend%4022027@10.99.99.53:39420,10.99.99.54:39420,10.99.99.188:39420,10.99.99.187:39420/?replicaSet=SN-UAT&appName=LuckyNext1",
+        url: "mongodb://lmn_backend:LmnBackend%4022027@10.146.34.28:39420/?replicaSet=SN-UAT&appName=LuckyNext1",
         options: {
             dbName: "minigame",
             useNewUrlParser: true,
@@ -31,12 +31,12 @@ export default {
         },
     },
     sentry: {
-        sentryUrl: "http://d039f2abe16b4252a70cdf60fff232b6@10.2.190.51:9009/288",
+        sentryUrl: "https://f457113be82441879a991096fce8c26c@sentry-ovs.sgamesuat.com/172",
         logIdentifier: "LuckyNext1",
         env: "UAT",
     },
     authenticateSettings: {
-        url: "http://gn_auth_api_uat:5000",
+        url: "http://gn-auth-api-uat-service:5000",
         id: "game-services",
         secret: "gameservices@20luminet&",
         requestTimeout: 10000,
@@ -44,7 +44,7 @@ export default {
         audiences: ["api", "admin-api"],
     },
     userServiceSettings: {
-        url: "http://gn_user_service_uat:5000",
+        url: "http://gn-user-service-uat-service:5000",
     },
     adminSecretKey: "asWDEerfOIdgsdqRTFabvmgh",
     metrics: {
@@ -53,7 +53,7 @@ export default {
     },
     enableMsgpackParser: true,
     gameManagementApiSettings: {
-        BASE: "http://gn_game_management_service_uat:5000",
+        BASE: "http://gn-game-management-service-uat-service:5000",
     },
     disableCors: false,
 };
